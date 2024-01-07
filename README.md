@@ -23,5 +23,10 @@ The project structure is organized as follows:
 ## Usage
 
 1. Install dependencies by running `pip install -r requirements.txt`.
-2. Run the Flask application using `python application.py`.
-3. Access the web app at [http://localhost:5000](http://localhost:5000) to make predictions.
+2. **Data Ingestion:** To ingest data, run `python data_ingestion.py`. This script reads data from `notebook/data/stud.csv`, saves it to `artifacts/data.csv`, and splits it into training and testing sets saved as `artifacts/train.csv` and `artifacts/test.csv` respectively.
+3. **Data Transformation:** To transform data, run `python data_transformation.py`. This script applies preprocessing transformations on the ingested data and saves the preprocessor object to `artifacts/preprocessor.pkl`.
+4. **Model Training:** To train the model, run `python model_trainer.py`. This script trains various machine learning models, evaluates their performance, selects the best model with an R-squared score of at least 0.6, and saves it to `artifacts/model.pkl`.
+5. **Prediction Pipeline:** The prediction pipeline is implemented in `predict_pipeline.py` in the `src/pipeline` directory. It contains classes for making predictions using a trained model and representing custom input data.
+6. Run the Flask application using `python application.py`.
+7. Access the web app at [http://localhost:5000](http://localhost:5000) to make predictions.
+
