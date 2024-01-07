@@ -3,7 +3,7 @@ import os
 from datetime import datetime
 
 # Creating a log file and using f-string naming file
-LOG_FILE=f"{datetime.now().strftime('%m_%d%_%Y_%H_%M_%S')}.log"
+LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 # Creating Log folder where all the log files will append
 logs_path=os.path.join(os.getcwd(),'logs', LOG_FILE)
 os.makedirs(logs_path,exist_ok=True)
