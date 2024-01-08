@@ -2,6 +2,8 @@
 
 This project is an end-to-end machine learning project that includes data ingestion, data transformation, model training, and evaluation pipelines. It also includes a prediction pipeline using a Flask web app for making predictions with the trained model.
 
+![Flask App](https://github.com/amananand97/Student-Performance-Indicator/blob/main/Screenshot-web%20page.png)
+
 ## Project Structure
 
 The project structure is organized as follows:
